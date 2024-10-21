@@ -11,9 +11,8 @@ def far_to_cel():
     temp_f = input("Please input the current temp in Farenheit: ")
     try:
         temp_f = int(temp_f) #this is the line that will throw an exception if the data type cant be converted to int
-        temp_c = ( temp_f + 32 ) * 5 / 9
-#        print(temp_c) debugging
-        temp_c = int(temp_c)
+        temp_c = round((( temp_f - 32 ) * 5 / 9), 2)
+#        print(temp_c) double checking my math
     except:
         print("Error: Try again, make sure to type an integer!:)")
     else:
